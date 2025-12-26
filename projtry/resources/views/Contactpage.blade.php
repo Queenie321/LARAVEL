@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us | Fashion Shop</title>
+    <title>Contact Us</title>
 
     <style>
         * {
