@@ -10,89 +10,111 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, sans-serif;
+    font-family:'Poppins', sans-serif;
 }
 
 body{
-    background:white;
+    background: yellow;
+    color:#1f2933;
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
-            background: white;
-            padding: 25px 40px;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .logo {
-            font-weight: bold;
-            font-size: 22px;
-            position: absolute;
-            left: 40px;
-        }
-
-        .nav-links {
-            margin: auto;
-        }
-
-        .nav-links a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #000;
-            font-size: 20px;
-            font-weight: 500;
-        }
-.menu-toggle{
-    display:none;
-    font-size:26px;
-    cursor:pointer;
-}
-
-/* ================= BANNER ================= */
-.banner{
-    background:maroon;
-    padding:50px 30px;
+    background:white;
+    padding:20px 40px;
     display:flex;
     align-items:center;
-    justify-content:center;
-    gap:40px;
-    text-align:center;
+    position:sticky;
+    top:0;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    z-index:100;
 }
 
-.banner-text{
-    color:white;
+.logo {
+    font-weight:700;
+    font-size:24px;
+    color:#d6336c;
 }
 
-.banner-text h1{
-    font-size:72px;
-    line-height:1;
-    font-weight:bold;
+.nav-links {
+    margin:auto;
 }
 
-.banner-text p{
-    margin-top:10px;
+.nav-links a {
+    margin:0 18px;
+    text-decoration:none;
+    color:#374151;
     font-size:18px;
 }
 
-.banner-images{
-    display:grid;
-    grid-template-columns:repeat(3,180px);
-    gap:15px;
+.nav-links a:hover{
+    color:#d6336c;
 }
 
-.banner-images img{
-    width:180px;
-    height:260px;
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 8%;
+    gap:50px;
+    background:#e75a84;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:64px;
+    font-weight:800;
+    color:white;
+}
+
+.hero-text p{
+    margin:20px 0;
+    font-size:18px;
+    color:white;
+    max-width:500px;
+}
+
+.hero-text button{
+    padding:14px 35px;
+    background:#d6336c;
+    color:white;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.hero-text button:hover{
+    background:#a0264f;
+}
+
+.hero-image{
+    flex:1;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:520px;
+    height:520px;
     object-fit:cover;
-    border-radius:10px;
+    border-radius:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
 }
 
 /* ================= ABOUT ================= */
 .about{
     background:white;
-    padding:60px 20px;
+    padding:80px 20px;
     display:flex;
     justify-content:center;
 }
@@ -101,52 +123,52 @@ body{
     max-width:900px;
     display:flex;
     align-items:center;
-    gap:40px;
-    text-align:left;
+    gap:50px;
+    flex-wrap:wrap;
 }
 
 .about-content img{
-    width:220px;
-    border-radius:10px;
+    width:260px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .about-text h2{
-    font-size:40px;
-    margin-bottom:10px;
+    font-size:42px;
+    margin-bottom:15px;
+    color:#d6336c;
 }
 
 .about-text p{
     font-size:16px;
-    line-height:1.7;
+    line-height:1.8;
+    color:#4b5563;
 }
 
 .about-text button{
-    margin-top:20px;
-    padding:12px 25px;
-    background:#555;
+    margin-top:25px;
+    padding:12px 30px;
+    background:#d6336c;
     color:white;
     border:none;
+    border-radius:30px;
     cursor:pointer;
 }
 
 /* ================= SPONSORS ================= */
 .sponsors{
-    background:maroon;
-    padding:50px 20px;
+    background:#fdf0f4;
+    padding:70px 20px;
     text-align:center;
 }
 
 .sponsors h2{
     font-size:36px;
-    margin-bottom:10px;
-}
-
-.sponsors p{
-    max-width:600px;
-    margin:0 auto 30px;
+    color:#d6336c;
 }
 
 .sponsor-logos{
+    margin-top:30px;
     display:flex;
     justify-content:center;
     gap:25px;
@@ -156,14 +178,16 @@ body{
 .sponsor-logos div{
     background:white;
     padding:18px 40px;
-    font-weight:bold;
-    font-size:18px;
+    font-weight:700;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
 /* ================= FOOTER ================= */
 footer{
-    background:white;
-    padding:50px 20px;
+    background:#1f2933;
+    padding:60px 20px;
+    color:#e5e7eb;
 }
 
 .footer-container{
@@ -176,47 +200,42 @@ footer{
 }
 
 .footer-box h3{
-    margin-bottom:10px;
-}
-
-.footer-box p,
-.footer-box a{
-    font-size:14px;
-    color:black;
-    text-decoration:none;
+    color:white;
+    margin-bottom:15px;
 }
 
 .footer-box input{
-    padding:8px;
+    padding:10px;
     width:220px;
+    border-radius:6px;
+    border:none;
+    margin-bottom:10px;
 }
 
 .footer-box button{
-    margin-top:10px;
-    padding:8px 20px;
+    padding:10px 25px;
+    background:#d6336c;
+    color:white;
+    border:none;
+    border-radius:25px;
 }
 
 .copyright{
-    background:black;
-    color:white;
+    background:#111827;
+    color:#9ca3af;
     text-align:center;
     padding:15px;
-    margin-top:30px;
 }
 
 /* ================= RESPONSIVE ================= */
 @media(max-width:900px){
-    .banner{
-        flex-direction:column;
-    }
-
-    .banner-images{
-        grid-template-columns:repeat(2,180px);
-    }
-
-    .about-content{
+    .hero{
         flex-direction:column;
         text-align:center;
+    }
+
+    .hero-image img{
+        height:420px;
     }
 }
 
@@ -224,21 +243,24 @@ footer{
     .nav-links{
         display:none;
         position:absolute;
-        top:60px;
+        top:70px;
         left:0;
         width:100%;
-        background:#ffd6de;
-        flex-direction:column;
+        background:white;
         text-align:center;
-        padding:15px 0;
+        padding:20px 0;
     }
 
     .nav-links.active{
-        display:flex;
+        display:block;
     }
 
     .menu-toggle{
         display:block;
+    }
+
+    .hero-text h1{
+        font-size:42px;
     }
 }
 </style>
@@ -248,63 +270,53 @@ footer{
 
 <!-- NAVBAR -->
 <div class="navbar">
-    <div class="logo">👗 Fashion Shop</div>
+    <div class="logo">👗 Fresh Style</div>
 
     <div class="menu-toggle" id="menuToggle">☰</div>
 
     <div class="nav-links" id="navLinks">
-        <a href="#">Homepage</a>
-        <a href="#">Aboutpage</a>
-        <a href="#">Contactpage</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
     </div>
 </div>
 
-<!-- BANNER -->
-<div class="banner">
-    <div class="banner-text">
-        <h1>NEW YEAR<br>NEW SALE</h1>
-        <p>Be stylish. Be confident. Be you.</p>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Fresh Style</h1>
+        <p>Discover trendy fashion that matches your confidence and personality.</p>
+        <button>Shop Now</button>
     </div>
 
-    <div class="banner-images">
-        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=entropy&cs=tinysrgb&fit=crop&h=260&w=180">
-        <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
-        <img src="https://images.unsplash.com/photo-1521334884684-d80222895322">
-        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
-        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
-        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80">
     </div>
-</div>
+</section>
 
 <!-- ABOUT -->
 <div class="about">
     <div class="about-content">
         <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
         <div class="about-text">
-            <h2>Shop Now!</h2>
+            <h2>About Our Shop</h2>
             <p>
-                Life is a fashion. Welcome to Fashion Shop, where fashion meets confidence.
-                We offer stylish, high-quality, and affordable clothing designed to express
-                your unique personality.
+                Fashion Shop brings you stylish, affordable, and high-quality clothing
+                designed to make you feel confident every day.
             </p>
-            <button>Read More</button>
+            <button>Learn More</button>
         </div>
     </div>
 </div>
 
 <!-- SPONSORS -->
 <div class="sponsors">
-    <h2>Sponsors</h2>
-    <p>
-        We’re grateful to our sponsors and partners who support our vision of
-        making fashion accessible to everyone.
-    </p>
-
+    <h2>Our Partners</h2>
     <div class="sponsor-logos">
-        <div>BENCH</div>
-        <div>UNIQLO</div>
-        <div>PENSHOPPE</div>
-        <div>JUANA</div>
+        <div>ZARA</div>
+        <div>H&M</div>
+        <div>MANGO</div>
+        <div>FOREVER 21</div>
     </div>
 </div>
 
@@ -320,10 +332,10 @@ footer{
 
         <div class="footer-box">
             <h3>Site Map</h3>
-            <p><a href="#">Home</a></p>
-            <p><a href="#">About Us</a></p>
-            <p><a href="#">Shop</a></p>
-            <p><a href="#">Contact Us</a></p>
+            <p>Home</p>
+            <p>About</p>
+            <p>Shop</p>
+            <p>Contact</p>
         </div>
 
         <div class="footer-box">
